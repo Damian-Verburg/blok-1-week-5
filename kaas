@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+
+        var kleur = prompt("is de kaas geel?");
+
+
+        if (kleur == "ja"){
+            var gaten = prompt("heeft uw kaas gaten?")
+        }
+
+        if (gaten == "ja") {
+            var duur = prompt("is de kaas belachelijk duur?") 
+        }
+        
+        if (gaten == "nee"){ 
+            var hard = prompt("is de kaas hard als steen?")
+        }
+
+        if (duur == "ja") {
+            alert("uw soort kaas is Emmenthaler")
+        }
+
+        if (duur == "nee") {
+            alert("uw soort kaas is een Leerdammer")
+        }
+
+       
+        if (hard == "ja") {
+            alert("uw soort kaas is Panmigiano Reggiano")
+        }
+        
+        if (hard == "nee") {
+            alert("uw soort kaas is Goudse kaas")
+        }
+        
+
+        if(kleur == "nee"){
+            var blauw = prompt("heeft de kaas blauwe schimmel?")
+        }
+
+        if(blauw == "nee") {
+            var korst = prompt("heeft de kaas een korst?")
+        } 
+
+        if(korst == "ja"){
+            alert("uw soort kaas is Camembert")
+        } 
+        if (korst == "nee") {
+            alert("uw soort kaas is Mozzarella")
+        }
+
+        if(blauw == "ja") {
+            var korst1 = prompt("heeft de kaas een korst?")
+        }
+
+        if (korst1 == "ja"){
+            alert("uw soort kaas is Bleu de Rochbaron")
+        }
+
+        if (korst1 == "nee"){
+            alert("uw soort kaas is Founme d'Ambert")
+        }
+           
+           
+
+       
+
+    </script>
+    
+    
+    </head>
+    <body>
+    
+                
+    </body>
+</html>
