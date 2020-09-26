@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="eng">
+<link rel="stylesheet" href='KipSpelCSS.css'>
+
+	<head>
+		<body>
+			<h2> <strong>Upgrades:</strong></h2>
+			<h1><span id= Score ></span></h1>
+			<button onclick="Farmer()" type="button" class= "Upgrade1" id='Upgrade2'><strong>Farmer</strong><h3></button>
+				<p><button type="button" onclick="cupgrade('cupgrade')">cursor upgrade</button></p>
+		
+				<br>
+			
+			<button onclick="Add()" type="button" class="Score" id="Score"><img src=Kip.jpg class='Score'></button>
+
+				
+				<script type="text/javascript">
+					var Score = document.getElementById('Score').innerHTML;
+					var load = document.getElementById('Score').innerHTML;
+					var save = document.getElementById('Score').innerHTML;
+					var cupgrade1 = 0
+
+					function cupgrade() {
+						var Score = document.getElementById('Score').innerHTML;
+						if (Score >= 10){
+							var Score = (Score - 10)
+							document.getElementById('Score').innerHTML = (Score)
+							var cupgrade1 = cupgrade1;
+							cupgrade1++;
+						}
+					}
+
+
+					function Add(){
+						var Score = document.getElementById('Score').innerHTML;
+						Score++;
+						document.getElementById('Score').innerHTML = Score;
+						if (Score > 0){
+							var audio = new Audio('Sound1.mp3');
+							audio.play();
+						}
+						if (cupgrade1 > 0) {
+							var Score = document.getElementById('Score').innerHTML;
+							Score++;
+							document.getElementById('Score').innerHTML = Score;
+						}
+					}
+
+					
+
+					function Farmer() {
+						var Score = document.getElementById('Score').innerHTML;
+						if(Score >= 10){
+							var Score = (Score - 10)
+							document.getElementById('Score').innerHTML = (Score)	
+						} else{
+							alert("je hebt 10 eieren nodig")
+						}
+					}
+
+
+				</script>
+				
+				<br><br>
+
+				<p><button type="button" onclick="save('opslaan')">save</button></p>
+				<p><button type="button" onclick="load('laden')">load</button></p>
+
+				<script type="text/javascript">
+
+				var opslaan = 'opslaan'
+				var laden = 'laden'
+   			
+
+				function save(opslaan) {
+				try {
+					Score = document.getElementById('Score').innerHTML 
+					localStorage.setItem('Score', opslaan);
+				} catch(err) {
+				console.log('kan niet opgeslagen worden')
+				}
+				console.log('game is opgeslagen');
+				}
+
+				function load(laden) {
+        		localStorage.getItem('opslaan');
+				localStorage.removeItem('opslaan');
+				}
+				
+
+				</script>
+
+
+
+		</body>	
+	</head>
+</html>
